@@ -5,10 +5,10 @@
 		<title>Curso Idiomas</title>
 	</head>
 	<body>
-		<header th:replace="/layouts/header::header"></header>
+		<header th:replace="~{/layouts/header::header}"></header>
 		<header>
 			<h1>Bienvenidos al curso de idiomas</h1>
-			<img alt="Idiomas" src="https://www.leonhunter.com/wp-content/uploads/2017/08/35968673_l-e1502678448611.jpg">
+			<img alt="Idiomas" src="@{/images/idiomas.jpg}">
 		</header>
 		<section>
 			<h2>Cursos disponibles</h2>
@@ -25,7 +25,19 @@
 						<th>Duracion</th>
 					</tr>
 				</thead>
+				<tbody>
+					<tr th:each="curso:${curso}">
+						<td><p th:text="${curso.titulo}"></p></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td><p th:text="${curso.modalidad}"></p></td>
+						<td></td>
+						<td></td>
+					</tr>
+				</tbody>
 			</table>
 		</section>
+		<footer th:replace="~{/layouts/footer::footer}"></footer>
 	</body>
 </html>

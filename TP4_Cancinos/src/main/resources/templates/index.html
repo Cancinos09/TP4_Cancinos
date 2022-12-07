@@ -8,7 +8,7 @@
 		<title>Home</title>
 	</head>
 	<body>
-		<header th:replace="/layouts/header :: header"></header>
+		<header th:replace="~{/layouts/header :: header}"></header>
 		<header>
 			<h1> Bienvenidos a la pagina principal</h1> <img alt="imagen de tecnologias" src="https://miro.medium.com/max/1024/1*vxjAHkrXbGG6gOiPZgjeZA.jpeg" title="Tecnologias" id="imagen1">
 		</header>
@@ -17,7 +17,7 @@
 			<section>
 				<h2>Cursos con inscripcion abierta</h2>
 				<ol>
-					<li><a href="#">Idiomas</a></li>
+					<li><a href="/curso_idiomas">Idiomas</a></li>
 					<li><a href="#">Diseño</a></li>
 					<li><a href="#">Desarrollo</a></li>
 					<li><a href="#">Marketing</a></li>
@@ -25,7 +25,7 @@
 				</ol>
 			</section>
 		</div>
-		<footer th:insert="/layouts/footer :: footer"></footer>
+		<footer th:insert="~{/layouts/footer :: footer}"></footer>
 		
 		
 		<script th:href="@{/webjars/jquery/jquery.min.js}" type="text/javascript"></script>
