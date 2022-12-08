@@ -2,8 +2,11 @@ package ar.edu.unju.edm.util;
 
 import java.util.ArrayList;
 
+import org.springframework.stereotype.Component;
+
 import ar.edu.unju.edm.model.Alumno;
 
+@Component
 public class ListaAlumnos {
 	private ArrayList<Alumno> listaAlumnos;
 	

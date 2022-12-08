@@ -1,11 +1,14 @@
 package ar.edu.unju.edm.model;
 
+import org.springframework.stereotype.Component;
+
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.Size;
-
+// Marcar la clase para que spring la tenga en memoria como un BEAN para no tener que construir objetos
+@Component
 public class Alumno {
 	
 	@Min (value=1000000, message="El dni debe ser mayor a 1.000.000")
