@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="UTF-8">
+		<title>Nuevo Docente</title>
+		<link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/5.1.3/css/bootstrap.min.css}">
+		<link rel="stylesheet" type="text/css" th:href="@{/css/style.css}">
+	</head>
+	<body>
+		<form action="/docente/guardado" class="col-6" id="formDocente" th:object="${docente}" method="post">
+			<div>
+				<label for="inputLegajo" class="form-label">Legajo</label>
+				<input type="number" class="form-control" id="inputLegajo" th:field="*{legajo}">
+			</div>
+			<div>
+				<label for="inputNombres" class="form-label">Nombres</label>
+				<input type="text" class="form-control" id="inputNombres" th:field="*{nombre}">
+			</div>
+			<div>
+				<label for="inputApellidos" class="form-label">Apellidos</label>
+				<input type="text" class="form-control" id="inputApellidos" th:field="*{apellido}">
+			</div>
+			<div>
+				<label for="inputEmail" class="form-label">E-mail</label>
+				<input type="email" class="form-control" id="inputEmail" th:field="*{email}">
+			</div>
+			<div>
+				<label for="inputTelefono" class="form-label">Teléfono</label>
+				<input type="number" class="form-control" id="inputTelefono" th:field="*{telefono}">
+			</div>
+			<input id="botonEnviar" type="submit" class="btn btn-primary btn-sm">
+			<input id="" type="reset" class="btn btn-secondary btn-sm">
+		</form>
+		
+		
+		
+	<script type="text/javascript" th:src="@{/webjars/jquery/3.6.0/jquery.min.js}"></script>
+	<script type="text/javascript" th:src="@{/webjars/popper.js/2.9.3/umd/popper.min.js}"></script>
+	<script type="text/javascript" th:src="@{/webjars/bootstrap/5.1.3/js/bootstrap.min.js}"></script>
+	</body>
+</html>

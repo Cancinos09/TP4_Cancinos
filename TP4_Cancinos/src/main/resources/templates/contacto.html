@@ -5,7 +5,7 @@
 		<title>Contáctanos</title>
 	</head>
 	<body>
-		<header th:replace="/layouts/header :: header"></header>
+		<header th:replace="~{/layouts/header :: header}"></header>
 		<header>
 			<h1>Contáctanos</h1>
 			<img alt="imagen para contactarnos xd" src="https://t2.uc.ltmcdn.com/es/posts/0/8/7/como_encontrar_las_mejores_formas_de_contacto_de_las_empresas_50780_orig.jpg">
@@ -48,6 +48,6 @@
 			<button>Enviar datos</button>
 				
 		</form>
-		
+		<footer th:replace="~{/layouts/footer::footer}"></footer>
 	</body>
 </html>

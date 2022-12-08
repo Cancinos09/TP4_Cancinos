@@ -3,41 +3,76 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>Curso Idiomas</title>
+		<link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/5.1.3/css/bootstrap.min.css}">
+		<link rel="stylesheet" type="text/css" th:href="@{/css/style.css}">
 	</head>
 	<body>
 		<header th:replace="~{/layouts/header::header}"></header>
 		<header>
 			<h1>Bienvenidos al curso de idiomas</h1>
-			<img alt="Idiomas" src="@{/images/idiomas.jpg}">
+			<img alt="Idiomas" src="https://www.leonhunter.com/wp-content/uploads/2017/08/35968673_l-e1502678448611.jpg">
 		</header>
 		<section>
 			<h2>Cursos disponibles</h2>
 			<p>Esta es una seccion donde veremos los diferentes cursos disponibles para la categoria Idiomas</p>
-			<table>
-				<thead>
-					<tr>
-						<th>Titulo</th>
-						<th>Fecha Inicio</th>
-						<th>Horario</th>
-						<th>Fecha Fin</th>
-						<th>Modalidad</th>
-						<th>Docente</th>
-						<th>Duracion</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr th:each="curso:${curso}">
-						<td><p th:text="${curso.titulo}"></p></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td><p th:text="${curso.modalidad}"></p></td>
-						<td></td>
-						<td></td>
-					</tr>
-				</tbody>
+		
+			<table class="default">
+	
+				<tr>
+	
+					<th>Título</th>
+					<th>Inicio</th>
+					<th>Horario</th>
+					<th>Finalización</th>
+					<th>Modalidad</th>
+					<th>Docente</th>
+					<th>Duración (Semanas)</th>
+	
+				</tr>
+	
+				<tr>
+	
+					<td>Inglés</td>
+					<td>02/05/22</td>
+					<td>10 a 13</td>
+					<td>02/08/22</td>
+					<td>Presencial</td>
+					<td>María Diaz</td>
+					<td>12</td>
+	
+				</tr>
+	
+				<tr>
+	
+					<td>Francés</td>
+					<td>02/05/22</td>
+					<td>10 a 13</td>
+					<td>02/08/22</td>
+					<td>Presencial</td>
+					<td>Alejandra Gutierrez</td>
+					<td>12</td>
+	
+				</tr>
+	
+				<tr>
+	
+					<td>Portugués</td>
+					<td>02/05/22</td>
+					<td>10 a 13</td>
+					<td>02/08/22</td>
+					<td>Presencial</td>
+					<td>Ester Vedia</td>
+					<td>12</td>
+	
+				</tr>
+	
 			</table>
 		</section>
 		<footer th:replace="~{/layouts/footer::footer}"></footer>
+		
+		
+	<script type="text/javascript" th:src="@{/webjars/jquery/3.6.0/jquery.min.js}"></script>
+	<script type="text/javascript" th:src="@{/webjars/popper.js/2.9.3/umd/popper.min.js}"></script>
+	<script type="text/javascript" th:src="@{/webjars/bootstrap/5.1.3/js/bootstrap.min.js}"></script>
 	</body>
 </html>

@@ -1,17 +1,32 @@
 package ar.edu.unju.edm.model;
 
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.Size;
+
 public class Alumno {
+	
+	@Min (value=1000000, message="El dni debe ser mayor a 1.000.000")
 	private int dni;
+	@Size(min=3, max=30, message="El nombre debe tener entre 3 y 30 caracteres")
+	@NotEmpty (message="El campo nombre no puede estar vacio")
 	private String nombre;
+	@Size(min=3, max=30, message="El apellido debe tener entre 3 y 30 caracteres")
+	@NotEmpty (message="El campo apellido no puede estar vacio")
 	private String apellido;
+	@NotBlank @Email
 	private String  email;
-	private long telefono;
+	@NotBlank
+	private String telefono;
 	
 	public Alumno() {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Alumno(int dni, String nombre, String apellido, String email, long telefono) {
+
+	public Alumno(int dni, String nombre, String apellido, String email, String telefono) {
 		super();
 		this.dni = dni;
 		this.nombre = nombre;
@@ -19,6 +34,8 @@ public class Alumno {
 		this.email = email;
 		this.telefono = telefono;
 	}
+
+
 
 	public int getDni() {
 		return dni;
@@ -52,13 +69,16 @@ public class Alumno {
 		this.email = email;
 	}
 
-	public long getTelefono() {
+	
+	public String getTelefono() {
 		return telefono;
 	}
 
-	public void setTelefono(long telefono) {
+
+	public void setTelefono(String telefono) {
 		this.telefono = telefono;
 	}
+
 
 	@Override
 	public String toString() {

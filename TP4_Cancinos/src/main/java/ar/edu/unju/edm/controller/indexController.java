@@ -15,4 +15,15 @@ public class indexController {
 	public String getAgendaPage() {
 		return "agenda";
 	}
+	
+	@GetMapping("/beneficios")
+	public String getBeneficiosPage() {
+		return "beneficios";
+	}
+	
+	@GetMapping("/contacto")
+	public String getContactoPage() {
+		return "contacto";
+	}
+	
 }
