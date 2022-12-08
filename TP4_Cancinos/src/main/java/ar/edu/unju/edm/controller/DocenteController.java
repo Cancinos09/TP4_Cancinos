@@ -24,6 +24,7 @@ public class DocenteController {
 	List<Docente> listaDocentes=new ArrayList<>();
 	
 	Logger logger = LoggerFactory.getLogger(DocenteController.class);
+	
 	@GetMapping("/nuevo")
 	public String getNuevoDocentePage(Model model) {
 		model.addAttribute("docente", new Docente());
